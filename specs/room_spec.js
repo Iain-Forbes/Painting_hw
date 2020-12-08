@@ -14,8 +14,10 @@ describe("Room", function (){
     //Assert
     assert.strictEqual(actual, 20);
 });
+
     it("shouldn't be painted", function(){
         assert.strictEqual(room.isPainted, false)
     })
+
 
 })   
