@@ -18,5 +18,20 @@ Painter.prototype.spillPaint = function (paint) {
     paint.litre = 0;
 }
 
+Painter.prototype.checkPaint = function (stock) {
+        var total = 0;
+        for (paint of this.stock) {
+            total = total += paint.litre
+             }
+        return total;
+ }
+  
+Painter.prototype.sufficientPaint = function(room) {
+    if (this.checkPaint >= room.size) {
+        return true
+    } else {
+        return false
+    }
 
+}
 module.exports = Painter;
