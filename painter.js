@@ -27,11 +27,8 @@ Painter.prototype.checkPaint = function (stock) {
  }
   
 Painter.prototype.sufficientPaint = function(room) {
-    if (this.checkPaint >= room.size) {
-        return true
-    } else {
-        return false
-    }
+    enoughPaint = (this.checkPaint() >= room.size) ? true:false 
+    return enoughPaint
 
 }
 module.exports = Painter;

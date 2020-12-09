@@ -60,10 +60,10 @@ describe("Painter", function (){
         assert.strictEqual(actual, false);
     });   
 
-    // it("Enough paint to paint room", function(){ 
-    //     painter.addStock(paint3);
-    //     const actual = painter.sufficientPaint(room);
-    //     assert.strictEqual(actual, true);
-    // });   
+    it("Enough paint to paint room", function(){ 
+        painter.addStock(paint3);
+        const actual = painter.sufficientPaint(room);
+        assert.strictEqual(actual, true);
+    });   
 
 })
