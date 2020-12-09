@@ -12,6 +12,7 @@ describe("Painter", function (){
         paint1 = new Paint("Blue", 15)
         paint2 = new Paint("Green", 5)
         paint3 = new Paint("Magnolia", 30)
+        paint4 = new Paint('Eggshell', 0 )
 
     });
 
@@ -65,5 +66,17 @@ describe("Painter", function (){
         const actual = painter.sufficientPaint(room);
         assert.strictEqual(actual, true);
     });   
+
+    it("Can Paint", function(){ 
+        painter.addStock(paint3);
+        painter.paint(room)
+        assert.strictEqual(paint3.litre, 10);
+    });  
+
+    it("Can Remove Paint when empty", function(){ 
+        painter.addStock(paint4);
+        painter.removeStock()
+        assert.deepStrictEqual(painter.stock, []);
+    });  
 
 })

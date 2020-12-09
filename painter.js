@@ -31,4 +31,17 @@ Painter.prototype.sufficientPaint = function(room) {
     return enoughPaint
 
 }
+
+Painter.prototype.paint = function(room){
+    for (paint of this.stock) {
+        paintUsed = paint.litre -= room.size
+    }    
+    return paintUsed;
+}
+
+Painter.prototype.removeStock = function (){
+    for (paint of this.stock)
+    if (paint.litre == 0){
+        this.stock.pop()
+}}
 module.exports = Painter;
